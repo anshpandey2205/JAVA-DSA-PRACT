@@ -14,7 +14,7 @@ public class Sudoku {
             if(sudoku[row][j]==digit){
                 return false;
             }
-        }
+        }  
 
         // GRID
         int sr=(row/3)*3;
