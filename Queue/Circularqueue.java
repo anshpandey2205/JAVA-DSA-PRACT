@@ -50,8 +50,29 @@ public class Circularqueue {
             }
             return result;
         }
+
+        public static int peek(){
+            if(IsEmpty()){
+                System.out.println("Queue is empty");
+                return -1;
+            }
+            return arr[front];
+        }
     }
     public static void main(String[]args){
+        circuArrQue q= new circuArrQue(3);
+        q.add(1);
+        q.add(2);
+        q.add(3);
+        System.out.println(q.remove());
+        q.add(4);
+        System.out.println(q.remove());
+        q.add(5);
+
+        while(!q.IsEmpty()){
+            System.out.println(q.peek());
+            q.remove();
+        }
 
     }
 }
