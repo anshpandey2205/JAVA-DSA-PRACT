@@ -73,6 +73,5 @@ public class Circularqueue {
             System.out.println(q.peek());
             q.remove();
         }
-
     }
 }
