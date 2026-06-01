@@ -17,7 +17,6 @@ public class ActivitySelection {
                 maxAct++;
                 ans.add(i);
                 lastEnd=end[i];
-                
             }
          }
 
