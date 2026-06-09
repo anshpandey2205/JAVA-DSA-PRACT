@@ -32,6 +32,8 @@ public class PreOrder {
                 return newNode;
             }
 
+                 // PREORDER TRAVERSAL
+
             public static void PreTraversal(Node root){
             if(root==null){
                 return;
@@ -41,6 +43,8 @@ public class PreOrder {
             PreTraversal(root.left);
             PreTraversal(root.right);
         }
+
+                  // INORDER TRAVERSAL
 
         public static void InTraversal(Node root){
             if(root==null){
@@ -52,6 +56,8 @@ public class PreOrder {
             InTraversal(root.right);
         }
 
+                   // POSTORDER TRAVERSAL
+
         public static void PostTraversal(Node root){
             if(root==null){
                 return;
@@ -61,6 +67,8 @@ public class PreOrder {
             PostTraversal(root.right);
             System.out.print(root.data+" ");
         }
+
+                    // LEVEL ORDER TRAVERSAL
 
         public static void LevelOrder(Node root){
             if(root==null){
@@ -92,7 +100,6 @@ public class PreOrder {
                 }
             }
 
-
             }
         }
 
@@ -109,7 +116,7 @@ public class PreOrder {
         //tree.PreTraversal(root);
         //tree.InTraversal(root);
         //tree.PostTraversal(root);
-        tree.LevelOrder(root);
+        //tree.LevelOrder(root);
 
 
 
