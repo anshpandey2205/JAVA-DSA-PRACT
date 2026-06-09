@@ -31,12 +31,85 @@ public class PreOrder {
 
                 return newNode;
             }
+
+            public static void PreTraversal(Node root){
+            if(root==null){
+                return;
+            }
+
+            System.out.print(root.data+" ");
+            PreTraversal(root.left);
+            PreTraversal(root.right);
         }
+
+        public static void InTraversal(Node root){
+            if(root==null){
+                return;
+            }
+
+            InTraversal(root.left);
+            System.out.print(root.data+" ");
+            InTraversal(root.right);
+        }
+
+        public static void PostTraversal(Node root){
+            if(root==null){
+                return;
+            }
+
+            PostTraversal(root.left);
+            PostTraversal(root.right);
+            System.out.print(root.data+" ");
+        }
+
+        public static void LevelOrder(Node root){
+            if(root==null){
+                return;
+            }
+
+            Queue<Node> q= new LinkedList<>();
+            q.add(root);
+            q.add(null);
+
+            while(!q.isEmpty()){
+                Node currNode=q.remove();
+
+                if(currNode==null){
+                    System.out.println();
+                if(q.isEmpty()){
+                    break;
+                }else{
+                    q.add(null);
+                }
+            }else{
+                System.out.print(currNode.data+" ");
+
+                if(currNode.left!=null){
+                    q.add(currNode.left);
+                }
+                if(currNode.right!=null){
+                    q.add(currNode.right);
+                }
+            }
+
+
+            }
+        }
+
+        }
+
+        
     public static void main (String args[]){
         int nodes[]={1,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree= new BinaryTree();
         Node root=tree.BuildTree(nodes);
         System.out.println(root.data);
+
+
+        //tree.PreTraversal(root);
+        //tree.InTraversal(root);
+        //tree.PostTraversal(root);
+        tree.LevelOrder(root);
 
 
 
